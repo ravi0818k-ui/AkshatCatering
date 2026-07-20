@@ -252,6 +252,87 @@
       to   { transform: translateX(-50%); }
     }
 
+    /* ─── CELEBRATION HUB ───────────────────────────────────── */
+    #celebrations {
+      background: linear-gradient(135deg, var(--ivory) 0%, #fef0d4 100%);
+      padding: 4.5rem 6vw;
+      position: relative;
+    }
+
+    #celebrations::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--saffron), var(--gold), var(--maroon), var(--gold), var(--saffron));
+    }
+
+    .celebrations-subtitle {
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+      max-width: 650px;
+      margin: -1.5rem auto 2.5rem;
+      line-height: 1.6;
+    }
+
+    .celebrations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .celebration-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.8rem 1.4rem;
+      text-align: center;
+      border: 2px solid transparent;
+      border-image: linear-gradient(135deg, var(--gold), var(--saffron)) 1;
+      box-shadow: 0 4px 16px rgba(123,28,47,.08);
+      transition: transform .25s, box-shadow .25s;
+      position: relative;
+    }
+
+    .celebration-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(123,28,47,.18);
+    }
+
+    .celebration-card .card-icon {
+      font-size: 2.8rem;
+      margin-bottom: .6rem;
+    }
+
+    .celebration-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--maroon);
+      margin-bottom: .4rem;
+    }
+
+    .celebration-card p {
+      font-size: .83rem;
+      color: #555;
+      line-height: 1.55;
+    }
+
+    .celebration-card .card-badge {
+      position: absolute;
+      top: -10px;
+      right: 16px;
+      background: var(--saffron);
+      color: #fff;
+      font-size: .68rem;
+      font-weight: 700;
+      padding: .25rem .7rem;
+      border-radius: 12px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+
     /* ─── SERVICES ──────────────────────────────────────────── */
     #services {
       background: var(--cream);
@@ -377,6 +458,147 @@
     }
 
     .btn-email:hover { background: var(--gold-lt); color: var(--maroon-dk); }
+
+    /* ─── SMART MENU PLANNING ──────────────────────────────── */
+    #menu-planning {
+      background: linear-gradient(135deg, var(--maroon-dk) 0%, #3d0f1f 100%);
+      padding: 4.5rem 6vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #menu-planning .section-title { color: var(--gold-lt); }
+    #menu-planning .title-ornament { color: var(--gold); }
+
+    .menu-planning-subtitle {
+      text-align: center;
+      color: rgba(255,255,255,.75);
+      font-size: .95rem;
+      max-width: 600px;
+      margin: -1.5rem auto 2.5rem;
+      line-height: 1.6;
+    }
+
+    .menu-cards-slider {
+      display: flex;
+      gap: 1.4rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+      scrollbar-color: var(--gold) transparent;
+    }
+
+    .menu-cards-slider::-webkit-scrollbar { height: 6px; }
+    .menu-cards-slider::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    .menu-card {
+      flex: 0 0 300px;
+      background: rgba(255,255,255,.06);
+      border: 1.5px solid rgba(200,149,42,.35);
+      border-radius: 14px;
+      padding: 2rem 1.6rem;
+      scroll-snap-align: start;
+      transition: transform .25s, border-color .25s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+
+    .menu-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--saffron);
+      font-size: 1.15rem;
+      margin-bottom: .4rem;
+    }
+
+    .menu-card .menu-desc {
+      color: rgba(255,255,255,.7);
+      font-size: .85rem;
+      margin-bottom: .9rem;
+      font-style: italic;
+    }
+
+    .menu-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-card ul li {
+      color: var(--cream);
+      font-size: .88rem;
+      padding: .3rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .menu-card ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--saffron);
+      font-weight: 700;
+    }
+
+    .menu-card .menu-note {
+      margin-top: 1rem;
+      color: var(--gold-lt);
+      font-size: .8rem;
+      font-style: italic;
+      border-top: 1px solid rgba(200,149,42,.2);
+      padding-top: .7rem;
+    }
+
+    /* Tips Grid */
+    .tips-section {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(200,149,42,.25);
+    }
+
+    .tips-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--saffron);
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: .4rem;
+    }
+
+    .tips-subtitle {
+      text-align: center;
+      color: rgba(255,255,255,.6);
+      font-size: .85rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .tip-item {
+      background: rgba(255,255,255,.05);
+      border-left: 3px solid var(--saffron);
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .tip-item h4 {
+      color: var(--saffron);
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      margin-bottom: .25rem;
+    }
+
+    .tip-item p {
+      color: rgba(255,255,255,.65);
+      font-size: .8rem;
+    }
 
     /* ─── VIDEO SECTION ─────────────────────────────────────── */
     #video-section {
@@ -724,7 +946,9 @@
 <nav>
   <a href="#" class="nav-logo">Akshat Catering &amp; Events</a>
   <ul class="nav-links">
+    <li><a href="#celebrations">Events</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#menu-planning">Menu</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#video-section">Video</a></li>
     <li><a href="#owner">Contact</a></li>
@@ -774,6 +998,66 @@
     🌸 Special Rajasthani Food Menu &nbsp;⬥&nbsp; Bridal &amp; Groom Makeup &nbsp;⬥&nbsp; Mehndi Artistry &nbsp;⬥&nbsp; Wedding Photography &nbsp;⬥&nbsp; Choreography &nbsp;⬥&nbsp; Tent · Horse · Band &nbsp;⬥&nbsp; Priest Services &nbsp;⬥&nbsp; Cab Arrangement &nbsp;⬥&nbsp; Barber &nbsp;⬥&nbsp; Basan &nbsp;⬥&nbsp; Wedding Location &nbsp;⬥&nbsp;
   </span>
 </div>
+
+<!-- ─── CELEBRATION HUB ──────────────────────────────────── -->
+<section id="celebrations">
+  <h2 class="section-title">Celebration Hub</h2>
+  <div class="title-ornament">✦ ✦ ✦</div>
+  <p class="celebrations-subtitle">Every celebration deserves perfection — from grand weddings to intimate gatherings, we bring it all to life.</p>
+
+  <div class="celebrations-grid">
+
+    <div class="celebration-card">
+      <span class="card-badge">Popular</span>
+      <div class="card-icon">💒</div>
+      <h3>Complete Wedding</h3>
+      <p>Full wedding planning &amp; execution — from engagement to vidaai, all under one roof.</p>
+    </div>
+
+    <div class="celebration-card">
+      <div class="card-icon">💍</div>
+      <h3>Pre-Wedding</h3>
+      <p>Mehndi, sangeet, haldi, engagement &amp; pre-wedding shoots — every function managed beautifully.</p>
+    </div>
+
+    <div class="celebration-card">
+      <div class="card-icon">🐴</div>
+      <h3>Barat &amp; Procession</h3>
+      <p>Grand baraat with decorated horse, band, DJ, lighting &amp; full procession management.</p>
+    </div>
+
+    <div class="celebration-card">
+      <div class="card-icon">🎂</div>
+      <h3>Birthday Party</h3>
+      <p>Fun-filled birthday celebrations — theme décor, catering, entertainment &amp; photography.</p>
+    </div>
+
+    <div class="celebration-card">
+      <div class="card-icon">🏢</div>
+      <h3>Office &amp; Corporate Events</h3>
+      <p>Professional event management for office parties, team outings, meetings &amp; corporate gatherings.</p>
+    </div>
+
+    <div class="celebration-card">
+      <div class="card-icon">🎊</div>
+      <h3>Anniversary &amp; Celebrations</h3>
+      <p>Marriage anniversaries, baby showers, house-warming &amp; all milestone celebrations.</p>
+    </div>
+
+    <div class="celebration-card">
+      <div class="card-icon">🪅</div>
+      <h3>Festival &amp; Religious Events</h3>
+      <p>Jagran, katha, puja, mundan &amp; other religious and festive gatherings with traditional touch.</p>
+    </div>
+
+    <div class="celebration-card">
+      <div class="card-icon">🎓</div>
+      <h3>Farewell &amp; Get-togethers</h3>
+      <p>School farewells, alumni meets, family reunions &amp; social gatherings — catered with love.</p>
+    </div>
+
+  </div>
+</section>
 
 <!-- ─── SERVICES ─────────────────────────────────────────── -->
 <section id="services">
@@ -858,9 +1142,131 @@
       <a href="tel:+919414330326" class="btn-call" onclick="handleCall(event)">
         📞 Call Now
       </a>
-      <a href="mailto:akshatg100@gmail.com?subject=Wedding Enquiry – Akshat Catering&body=Hello Sunil ji,%0A%0AI am interested in your catering and event services. Please share more details.%0A%0AThank you." class="btn-email">
+      <a href="mailto:sunil10gupta1969@gmail.com?subject=Wedding Enquiry – Akshat Catering&body=Hello Sunil ji,%0A%0AI am interested in your catering and event services. Please share more details.%0A%0AThank you." class="btn-email">
         ✉ Email Us
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SMART MENU PLANNING ──────────────────────────────── -->
+<section id="menu-planning">
+  <h2 class="section-title">Smart Menu Planning</h2>
+  <div class="title-ornament">✦ ✦ ✦</div>
+  <p class="menu-planning-subtitle">We plan the perfect menu for every wedding function — because the right food at the right event makes all the difference.</p>
+
+  <div class="menu-cards-slider">
+
+    <div class="menu-card">
+      <h3>🎨 Mehendi Menu</h3>
+      <p class="menu-desc">Keep it colorful and snack-heavy</p>
+      <ul>
+        <li>Chaat varieties</li>
+        <li>Mocktails &amp; sharbat</li>
+        <li>Finger foods</li>
+        <li>Fruit bar</li>
+        <li>Mini desserts</li>
+      </ul>
+      <p class="menu-note">Fun, light &amp; Instagram-worthy spread</p>
+    </div>
+
+    <div class="menu-card">
+      <h3>💛 Haldi Ceremony Menu</h3>
+      <p class="menu-desc">Simple and traditional works best</p>
+      <ul>
+        <li>Khichdi</li>
+        <li>Poori sabzi</li>
+        <li>Lassi</li>
+        <li>Seasonal fruits</li>
+        <li>Mithai</li>
+      </ul>
+      <p class="menu-note">Comfort food that feels like home</p>
+    </div>
+
+    <div class="menu-card">
+      <h3>🎶 Sangeet Night Menu</h3>
+      <p class="menu-desc">Slightly richer but still balanced</p>
+      <ul>
+        <li>Live grills &amp; kebabs</li>
+        <li>Multi-cuisine starters</li>
+        <li>Dessert counters</li>
+        <li>Mocktails &amp; cold drinks</li>
+        <li>Pasta &amp; pizza station</li>
+      </ul>
+      <p class="menu-note">Party vibe with non-stop food</p>
+    </div>
+
+    <div class="menu-card">
+      <h3>💒 Wedding Reception Menu</h3>
+      <p class="menu-desc">Full traditional spread + premium counters</p>
+      <ul>
+        <li>Dal-Baati-Churma</li>
+        <li>Paneer &amp; veg curries</li>
+        <li>Live dosa &amp; chaat counter</li>
+        <li>Ice cream &amp; kulfi</li>
+        <li>Rajasthani thali</li>
+      </ul>
+      <p class="menu-note">Grand feast — the main event</p>
+    </div>
+
+    <div class="menu-card">
+      <h3>🌙 Late-Night Snack Counter</h3>
+      <p class="menu-desc">Especially popular after pheras</p>
+      <ul>
+        <li>Mini pav bhaji</li>
+        <li>Maggi counter</li>
+        <li>Tea &amp; coffee station</li>
+        <li>Mini sandwiches</li>
+        <li>Kathi rolls</li>
+      </ul>
+      <p class="menu-note">Guests remember this more than main dinner!</p>
+    </div>
+
+    <div class="menu-card">
+      <h3>🍉 Fruit Counter</h3>
+      <p class="menu-desc">A hidden superpower for summer weddings</p>
+      <ul>
+        <li>Watermelon</li>
+        <li>Pineapple</li>
+        <li>Papaya</li>
+        <li>Musk melon</li>
+        <li>Grapes</li>
+      </ul>
+      <p class="menu-note">Served chilled in bite-size portions</p>
+    </div>
+
+  </div>
+
+  <!-- Practical Tips -->
+  <div class="tips-section">
+    <h3 class="tips-title">Practical Catering Tips Most Couples Miss</h3>
+    <p class="tips-subtitle">These make a real difference to your event</p>
+
+    <div class="tips-grid">
+      <div class="tip-item">
+        <h4>Avoid too many fried starters</h4>
+        <p>Guests feel full early &amp; skip the main course</p>
+      </div>
+      <div class="tip-item">
+        <h4>Limit paneer dishes to 2</h4>
+        <p>Too much paneer feels repetitive — variety matters</p>
+      </div>
+      <div class="tip-item">
+        <h4>Keep at least 40% menu regional</h4>
+        <p>Guests always remember authentic Rajasthani flavors</p>
+      </div>
+      <div class="tip-item">
+        <h4>Use shaded serving zones</h4>
+        <p>Improves food quality &amp; guest comfort outdoors</p>
+      </div>
+      <div class="tip-item">
+        <h4>Always include hydration drinks</h4>
+        <p>ORS-style sharbat — especially for daytime weddings</p>
+      </div>
+      <div class="tip-item">
+        <h4>Add a live counter</h4>
+        <p>Dosa, chaat or grill — keeps guests engaged &amp; excited</p>
+      </div>
     </div>
   </div>
 </section>
@@ -952,7 +1358,7 @@
     <a href="tel:+919414330326" class="btn-call" onclick="handleCall(event)" style="font-size:.95rem; padding:.65rem 1.3rem;">
       📞 Call Now
     </a>
-    <a href="mailto:akshatg100@gmail.com?subject=Wedding Enquiry – Akshat Catering&body=Hello Sunil ji,%0A%0AI am interested in your services. Please get in touch.%0A%0AThank you." class="btn-email" style="font-size:.9rem;">
+    <a href="mailto:sunil10gupta1969@gmail.com?subject=Wedding Enquiry – Akshat Catering&body=Hello Sunil ji,%0A%0AI am interested in your services. Please get in touch.%0A%0AThank you." class="btn-email" style="font-size:.9rem;">
       ✉ Email Us
     </a>
   </div>
@@ -969,7 +1375,7 @@
       </li>
       <li>
         <span class="ico">✉</span>
-        <a href="mailto:akshatg100@gmail.com">akshatg100@gmail.com</a>
+        <a href="mailto:sunil10gupta1969@gmail.com">sunil10gupta1969@gmail.com</a>
       </li>
     </ul>
 
@@ -998,7 +1404,7 @@
   </p>
   <p style="margin-top:.4rem;">
     📞 <a href="tel:+919414330326">+91-9414330326</a> &nbsp;|&nbsp;
-    ✉ <a href="mailto:akshatg100@gmail.com">akshatg100@gmail.com</a>
+    ✉ <a href="mailto:sunil10gupta1969@gmail.com">sunil10gupta1969@gmail.com</a>
   </p>
   <p style="margin-top:.8rem; color:rgba(255,255,255,.35); font-size:.72rem;">
     © 2024 Akshat Catering &amp; Events. All rights reserved.
